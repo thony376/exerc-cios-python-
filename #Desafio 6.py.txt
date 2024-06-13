@@ -1,0 +1,99 @@
+#Desafio 6 Jokenpô
+
+import random
+
+op_jogador = int(input("Digite sua escolha: \n1-Pedra \n2-papel  \n3-Tesoura \n digite: "))
+# op_jogador = op_jogador.upper()
+
+print(op_jogador)
+
+if op_jogador ==1:
+    tx_jogador="PEDRA"
+    img_jogador="🧱"
+if op_jogador ==2:
+    tx_jogador="PAPEL"
+    img_jogador ="🧻"
+if op_jogador ==3:
+    tx_jogador="TESOURA"
+    img_jogador ="✂"
+else:
+    print("Opção invalida")
+
+print(tx_jogador)
+   
+opcoes =["PEDRA","PAPEL","TESOURA"]
+# numero_randomico = random.randint(0,2) #0 ou 1 ou 2
+
+# print(opcoes)#random.randint(0,2)
+# print(opcoes[1])#PAPEL
+ 
+# op_computador= opcoes[numero_randomico]
+op_computador =random.choice(opcoes)
+
+print(f"Esolha jogador: {tx_jogador} - {img_jogador}")
+print(f"Esolha PC: {op_computador}")
+
+#VITORIA
+if (
+        (tx_jogador=="PEDRA" and op_computador=="TESOURA")or
+        (tx_jogador=="TESOURA" and op_computador=="PAPEL")or
+        (tx_jogador=="PAPEL" and op_computador=="PEDRA")    
+    ):
+    print("Você venceu! 😎")
+#Derrota
+elif (
+        (tx_jogador=="PEDRA" and op_computador=="PAPEL")or
+        (tx_jogador=="TESOURA" and op_computador=="PEDRA")or
+        (tx_jogador=="PAPEL" and op_computador=="TESOURA")    
+    ):
+    print("Você perdeu! 😵")
+else:
+    print("EMPATE!! 😐")
+    
+    
+    
+    
+#desafio 1 
+for fogos in range (0, 10, 1):
+    print(fogos)
+    time.sleep
+    
+#desafio 2
+for i in range (2,51,2):
+        print(i)
+    
+#desafio 3
+soma = 0
+for i in range (1,501,2):
+    if i%3 ==0:
+        print(i)
+        soma=soma+i
+print(f"Soma = {soma}")
+
+
+#desafio 4
+numero = int(input("Digite um numero"))
+inicio= int(input('Digite o numero de inicio'))
+fim= int(input("Digite o numero de fim"))
+
+fim=fim+1
+
+for contador in range(inicio,fim):
+    print(f"{numero} x {contador}= {numero*contador}")
+print("fim")
+
+#desafio 5
+soma_pares = 0
+for i in range(6):
+    numero = int(input("Digite um número inteiro: "))
+    if numero % 2 == 0:
+        soma_pares += numero
+print("A soma dos números pares é:", soma_pares)
+
+#desafio 6
+primeiroTermo = int(input("Digite o primeiro termo da PA"))
+razão = int(input("Digite a razão da PA"))
+
+for i in range (10):
+    termo = primeiroTermo + i * razão
+
